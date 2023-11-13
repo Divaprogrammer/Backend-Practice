@@ -1,0 +1,83 @@
+/* Add styles to your chat box */
+.chat-box {
+    width: 300px;
+    height: 200px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Initially hide the messages */
+.message {
+    display: none;
+}
+
+body {
+    background: #000;
+  }
+
+  .animated-border {
+    position: absolute;
+    inset: 0;
+    top: 50%;
+    left: 0;
+    height: 100%;
+    background: conic-gradient(
+      transparent 50deg,
+      #ff4874 80deg,
+      transparent 100deg
+    );
+    filter: blur(8px);
+    border-radius: 16px;
+    transform-origin: center;
+    animation: border-animation -0.64s linear 4s infinite;
+    will-change: transform;
+  }
+
+  .wrapper {
+    margin-top: 32px;
+    padding: 4px;
+    position: relative;
+    margin-top: 128px;
+    overflow: hidden;
+    background: linear-gradient(0deg, rgba(22, 4, 8, 0.5), rgba(22, 4, 8, 0.5)),
+      linear-gradient(100.41deg, #ff5b37 0.52%, #ab0052 100.52%);
+    border-radius: 16px;
+    box-shadow: 0 0 27px rgba(173, 40, 40, 0.48);
+    max-width: 1000px;
+    display: block;
+    margin: auto;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(0deg, rgba(22, 4, 8, 0.96), rgba(22, 4, 8, 0.96)),
+      linear-gradient(100.41deg, #ff5b37 0.52%, #ab0052 100.52%);
+    border: 1px solid hsla(0, 0%, 100%, 0.1);
+    border-radius: 12px;
+    padding: 40px;
+    height: 139px;
+  }
+
+  @keyframes border-animation {
+    0% {
+      transform: translateY(-25%) translateX(40%) rotate(0deg);
+    }
+
+    30% {
+      transform: translateY(0) translateX(0) rotate(90deg) scaleX(0.7);
+    }
+
+    50% {
+      transform: translateY(-25%) translateX(-40%) rotate(180deg);
+    }
+
+    70% {
+      transform: translateY(0) translateX(0) rotate(270deg) scaleX(0.7);
+    }
+
+    to {
+      transform: translateY(-25%) translateX(40%) rotate(1turn);
+    }
+  }
